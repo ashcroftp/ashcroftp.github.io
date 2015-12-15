@@ -232,10 +232,17 @@ body {
 .publications .years .paper {
 }
 
-.publications .years .paper-authors {font-weight: 300;}
-.publications .years .paper-title {font-weight: 400;}
+.publications .years .paper-authors {font-weight: 300; float: left;}
+.publications .years .paper-title {font-weight: 400; clear: left;}
 .publications .years .paper-reference {font-weight: 300;}
 
+.publications .OA {
+    color: #1F407A;
+    font-weight: 400;
+    float: right;}
+.publications .OA:before {
+    content: "Open Access";
+}
 
 .cv b {font-weight: 400;}
 .cv ul {
