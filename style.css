@@ -21,6 +21,19 @@ body {
     border-bottom: 1px solid #636366;
 }
 
+.top-menu-bar .my-header {
+    color: white;
+    font-size: 25px;
+    font-weight: 400;
+    padding-bottom: 5px;
+    padding-top: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-align: center;
+    left: 50%;
+    margin-left: 100px;
+}
+
 /* Menu */
 .top-menu-bar .icon-menu-open {
     color: white;
@@ -235,6 +248,13 @@ body {
 .publications .years .paper-authors {font-weight: 300; float: left;}
 .publications .years .paper-title {font-weight: 400; clear: left;}
 .publications .years .paper-reference {font-weight: 300;}
+
+.publications .years .book {
+}
+
+.publications .years .book-authors {font-weight: 300; float: left;}
+.publications .years .book-title {font-weight: 400; clear: left;}
+.publications .years .book-reference {font-weight: 300;}
 
 .publications .OA {
     color: #1F407A;
