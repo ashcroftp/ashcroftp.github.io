@@ -30,8 +30,6 @@ body {
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-    left: 50%;
-    margin-left: 100px;
 }
 
 /* Menu */
@@ -63,12 +61,13 @@ body {
 .menu .icon-menu-close {
     color: white;
     font-size: 25px;
-    font-weight: 400;
+    font-weight: 300;
     padding-bottom: 5px;
     padding-left: 20px;
     padding-top: 4px;
     text-decoration: none;
     text-transform: uppercase;
+    width: 120px;
 }
 
 .menu .icon-menu-close i {
@@ -207,6 +206,12 @@ body {
 
 .my-research .project {
     height: 210px;
+}
+
+.my-research .project .title {
+    color: #1F407A;
+    font-weight: 400;
+    font-size: 20px;
 }
 
 .my-research .project .my-image {
