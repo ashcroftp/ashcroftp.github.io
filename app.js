@@ -1,12 +1,12 @@
 var main = function() {
     /* Push the body and the nav over by 200px over */
-    $('.icon-menu-open').mouseenter(function() {
+    $('.icon-menu-open').on('click mouseenter', function() {
 	$('body').animate({left: "200px"}, 200);
 	$('.menu').animate({left: "0px"}, 200).css("z-index","101");
     });
 
     /* Then push them back */
-    $('.menu').mouseleave(function() {
+    $('.menu').on('click mouseleave', function() {
 	$('.menu').animate({left: "-200px"}, 200).css("z-index","99");
 	$('body').animate({left: "0px"}, 200);
     });
