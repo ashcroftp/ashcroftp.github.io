@@ -52,6 +52,7 @@ body {
 .menu {
     background: #1F407A;
     left: -200px;  /* start off behind the scenes */
+    top: 41px;
     height: 100%;
     position: fixed;
     width: 200px;
@@ -160,7 +161,10 @@ body {
     color: black;
     font-size: 15px;
     font-weight: 300;
-    margin: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 5px;
     text-decoration: none;
 }
 
@@ -205,7 +209,9 @@ body {
 }
 
 .my-research .project {
-    height: 210px;
+    clear: left;
+    overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .my-research .project .title {
@@ -215,13 +221,16 @@ body {
 }
 
 .my-research .project .my-image {
-    height: 200px;
+    width: 20%;
     float: left;
-    margin-left: 10px;
-    margin-right: 10px;  
-    margin-bottom: 10px;
+    display: block;
+    margin-left: 0px;
+    margin-right: 10px;
 }
 
+.my-research .project .description {
+    overflow: auto;
+}
 
 .publications .years ol {
     list-style: none;
