@@ -16,7 +16,7 @@
       <div class="my-title">
         Peter Ashcroft, &emsp; ETH Z&uuml;rich
       </div>
-      <div class="menu">
+      <nav>
         <ul>
           <li><a href="#about-me">About me</a></li>
           <li><a href="#my-research">My research</a></li>
@@ -26,7 +26,7 @@
           <li><a href="#contact">Contact</a></li>
           <li><a href="#for-fun">For fun</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
   </div>
 
@@ -35,486 +35,493 @@
     <!-- about-me -->
     <div class="about-me" id="about-me">
       <div class="container">
-        <h2>About me</h2>
-        <p>
-          I am a postdoc researcher in theoretical biology. What that means is I spend a lot of time in front of my computer, whilst trying to maintain relationships with practitioners in the life sciences. The rest of my time is spent worrying about a career in
-          science and academia, and questioning why it is so hard to find brown sugar here in Switzerland.
-        </p>
-        <p>
-          I fulfil many roles in this position: modeller, data analyst, programmer, supercomputer tamer, &#8230;. However, with a background in mathematics and physics I also enjoy the analytical side of life.
-          <i>Quantitative biologist</i> may be overselling my life-science credentials, but it is a catchy title so I will stick with it.
-        </p>
-        <p>
-          I specialise in combining all of the above approaches: creating models that are simple enough to be analysed mathematically and simulated efficiently, whilst still maintaining some contact with reality. The greatest satisfaction comes when the mathematics
-          tells you something unknown about computational results, and these results combined provide new insights into the workings of the world.
-        </p>
-
+        <div class="block">
+          <h2>About me</h2>
+          <p>
+            I am a postdoc researcher in theoretical biology. What that means is I spend a lot of time in front of my computer, whilst trying to maintain relationships with practitioners in the life sciences. The rest of my time is spent worrying about a career in
+            science and academia, and questioning why it is so hard to find brown sugar here in Switzerland.
+          </p>
+          <p>
+            I fulfil many roles in this position: modeller, data analyst, programmer, supercomputer tamer, &#8230;. However, with a background in mathematics and physics I also enjoy the analytical side of life.
+            <i>Quantitative biologist</i> may be overselling my life-science credentials, but it is a catchy title so I will stick with it.
+          </p>
+          <p>
+            I specialise in combining all of the above approaches: creating models that are simple enough to be analysed mathematically and simulated efficiently, whilst still maintaining some contact with reality. The greatest satisfaction comes when the mathematics
+            tells you something unknown about computational results, and these results combined provide new insights into the workings of the world.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- my-research -->
     <div class="my-research" id="my-research">
       <div class="container">
-        <h2>My research</h2>
+        <div class="block">
+          <h2>My research</h2>
 
-        <div class="project">
-          <img class="my-image" src="tree.jpg">
-          <div class="description">
-            <span class="title">Hematopoiesis</span>
-            <p>
-              The human hematopoietic system produces 10<sup>11</sup> cells per day, which emerge from relatively rare hematopoietic stem cells. A complex division tree has evolved to allow multiple cell types to be produced and to amplify the cell numbers.
-              This structure can also prevent the accumulation of mutations, which are inevitable given the huge number of divisions per day. By combining experimental data and mathematical models, we hope to reconstruct this tree and to understand the
-              impact that ageing and disease have on the hematopoietic system.
-            </p>
-            <p>
-              This project is in collaboration with the Division of Hematology at University Hospital Z&uuml;rich, and is part of a <a href="http://www.systemsx.ch/projects/medical-research-and-development-projects/stemsysmed/" target="_blank" style="color: #1F407A;">larger SystemsX.ch project</a>              between ETH Z&uuml;rich, University Hospital Z&uuml;rich, and University Hospital Basel.
-            </p>
-            <p>
-              Further sub-projects relate to the dynamics of hematopoietic stem cells, in particular how the effects of disease spread, transplantation, and host conditioning.
-            </p>
+          <div class="project">
+            <img class="my-image" src="tree.jpg">
+            <div class="description">
+              <span class="title">Hematopoiesis</span>
+              <p>
+                The human hematopoietic system produces 10<sup>11</sup> cells per day, which emerge from relatively rare hematopoietic stem cells. A complex division tree has evolved to allow multiple cell types to be produced and to amplify the cell
+                numbers. This structure can also prevent the accumulation of mutations, which are inevitable given the huge number of divisions per day. By combining experimental data and mathematical models, we hope to reconstruct this tree and to understand
+                the impact that ageing and disease have on the hematopoietic system.
+              </p>
+              <p>
+                This project is in collaboration with the Division of Hematology at University Hospital Z&uuml;rich, and is part of a <a href="http://www.systemsx.ch/projects/medical-research-and-development-projects/stemsysmed/" target="_blank" style="color: var(--accent-colour);">larger SystemsX.ch project</a>                between ETH Z&uuml;rich, University Hospital Z&uuml;rich, and University Hospital Basel.
+              </p>
+              <p>
+                Further sub-projects relate to the dynamics of hematopoietic stem cells, in particular how the effects of disease spread, transplantation, and host conditioning.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <img class="my-image" src="cancer.jpg">
+            <div class="description">
+              <span class="title">Cancer dynamics and treatment</span>
+              <p>
+                Cancer is a genetic disease, requiring multiple alterations to the genome to initiate uncontrolled proliferation. Mathematical models have long been used to further our understanding of this malignancy, and can help us understand cancer initiation, progresssion,
+                and evolution. They can also inform us about the efficacy of treatment strategies, both in terms of clearance of the disease and preventing the emergence of drug resistance.
+              </p>
+              <p>
+                My interests here lie in understanding the initiation of cancer in stem cells and in tissue, and in treatment strategies which prevent the accumulation of drug-resistant cancer cells.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <img class="my-image" src="game.jpg">
+            <div class="description">
+              <span class="title">Evolutionary dynamics and game theory</span>
+              <p>
+                Interactions between individuals in a population can be complex, and may depend on the current state of the population. The framework of evolutionary game theory has been developed to capture these scenarios and their emergent phenomena. I approach this
+                problem from two sides: Firstly, it is a playground for combining methods from mathematics and physics to arrive at an improved understanding. Secondly, I like to bring the problem (a little bit) closer to reality, by considering the impact
+                of environmental variation and non-constant populations.
+              </p>
+            </div>
+          </div>
+
+          <div class="project">
+            <img class="my-image" src="switch.jpg">
+            <div class="description">
+              <span class="title">And then there's more&#8230;</span>
+              <p>
+                &rarr; Analytical methods and approximations for mutant number distributions.
+                <br/> &rarr; Lifetimes in individual-based processes.
+                <br/> &rarr; Combining environmental and population dynamics.
+                <br/> &rarr; &#8230;
+              </p>
+            </div>
           </div>
         </div>
-
-        <div class="project">
-          <img class="my-image" src="cancer.jpg">
-          <div class="description">
-            <span class="title">Cancer dynamics and treatment</span>
-            <p>
-              Cancer is a genetic disease, requiring multiple alterations to the genome to initiate uncontrolled proliferation. Mathematical models have long been used to further our understanding of this malignancy, and can help us understand cancer initiation, progresssion,
-              and evolution. They can also inform us about the efficacy of treatment strategies, both in terms of clearance of the disease and preventing the emergence of drug resistance.
-            </p>
-            <p>
-              My interests here lie in understanding the initiation of cancer in stem cells and in tissue, and in treatment strategies which prevent the accumulation of drug-resistant cancer cells.
-            </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class="my-image" src="game.jpg">
-          <div class="description">
-            <span class="title">Evolutionary dynamics and game theory</span>
-            <p>
-              Interactions between individuals in a population can be complex, and may depend on the current state of the population. The framework of evolutionary game theory has been developed to capture these scenarios and their emergent phenomena. I approach this
-              problem from two sides: Firstly, it is a playground for combining methods from mathematics and physics to arrive at an improved understanding. Secondly, I like to bring the problem (a little bit) closer to reality, by considering the impact
-              of environmental variation and non-constant populations.
-            </p>
-          </div>
-        </div>
-
-        <div class="project">
-          <img class="my-image" src="switch.jpg">
-          <div class="description">
-            <span class="title">And then there's more&#8230;</span>
-            <p>
-              &rarr; Analytical methods and approximations for mutant number distributions.
-              <br/> &rarr; Lifetimes in individual-based processes.
-              <br/> &rarr; Combining environmental and population dynamics.
-              <br/> &rarr; &#8230;
-            </p>
-          </div>
-        </div>
-
       </div>
     </div>
 
     <!-- publications -->
     <div class="publications" id="publications">
       <div class="container">
-        <h2>Publications</h2>
+        <div class="block">
+          <h2>Publications</h2>
 
-        <table class="empty-table">
-          <tr>
-            <td>
-              <p>For approximate citometrics, check my Google Scholar account.</p>
-            </td>
-            <td style="width:10px;"></td>
-            <td>
-              <a href="https://scholar.google.co.uk/citations?user=ba2dsUQAAAAJ&hl=en" target="_blank">
-                <div class="button"> Google Scholar </div>
-              </a>
-            </td>
-          </tr>
-        </table>
-
-        <div class="years-list">
-          <table class="empty-table" style="margin: 10px 0px;">
+          <table class="empty-table">
             <tr>
               <td>
-                <a href="#year-2017">
-                  <div class="button">2017</div>
-                </a>
+                <p>For approximate citometrics, check my Google Scholar account.</p>
               </td>
-              <td style="width=10px;"></td>
+              <td style="width:10px;"></td>
               <td>
-                <a href="#year-2016">
-                  <div class="button">2016</div>
-                </a>
-              </td>
-              <td style="width=10px;"></td>
-              <td>
-                <a href="#year-2015">
-                  <div class="button">2015</div>
-                </a>
-              </td>
-              <td style="width=10px;"></td>
-              <td>
-                <a href="#year-2014">
-                  <div class="button">2014</div>
-                </a>
-              </td>
-              <td style="width=10px;"></td>
-              <td>
-                <a href="#year-2013">
-                  <div class="button">2013</div>
+                <a href="https://scholar.google.co.uk/citations?user=ba2dsUQAAAAJ&hl=en" target="_blank">
+                  <div class="button"> Google Scholar </div>
                 </a>
               </td>
             </tr>
           </table>
+
+          <div class="years-list">
+            <table class="empty-table" style="margin: 10px 0px;">
+              <tr>
+                <td>
+                  <a href="#year-2017">
+                    <div class="button">2017</div>
+                  </a>
+                </td>
+                <td style="width=10px;"></td>
+                <td>
+                  <a href="#year-2016">
+                    <div class="button">2016</div>
+                  </a>
+                </td>
+                <td style="width=10px;"></td>
+                <td>
+                  <a href="#year-2015">
+                    <div class="button">2015</div>
+                  </a>
+                </td>
+                <td style="width=10px;"></td>
+                <td>
+                  <a href="#year-2014">
+                    <div class="button">2014</div>
+                  </a>
+                </td>
+                <td style="width=10px;"></td>
+                <td>
+                  <a href="#year-2013">
+                    <div class="button">2013</div>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+
+
+          <div class="years">
+            <div class="year-2017" id="year-2017">
+              <h3>2017</h3>
+              <ol start="7">
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span>, M.G. Manz, and S. Bonhoeffer</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">Clonal Dominance and Transplantation Dynamics in Hematopoietic Stem Cell Compartments</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference"> PLoS Comput. Biol. 13 (2017)&emsp;(DOI: 10.1371/journal.pcbi.1005803)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1371/journal.pcbi.1005803" target="_blank">
+                            <div class="button">PLoS</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1707.04194" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span>, C.E.R. Smith, M. Garrod, and T. Galla</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">Effects of population growth on the success of invading mutants</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference">J. Theor. Biol. 420 (2017)&emsp;(DOI: 10.1016/j.jtbi.2017.03.014)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1016/j.jtbi.2017.03.014" target="_blank">
+                            <div class="button">Elsevier</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1609.06742" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+
+            <div class="year-2016" id="year-2016">
+              <h3>2016</h3>
+              <ol start="5">
+                <li>
+                  <div class="book">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="book-authors"><span class="me">P. Ashcroft</span></div>
+                            </tr>
+                            <tr>
+                              <div class="book-title">The statistical physics of fixation and equilibration in individual-based models</div>
+                            </tr>
+                            <tr>
+                              <div class="book-reference">Springer International Publishing, Switzerland (2016)&emsp;(DOI: 10.1007/978-3-319-41213-9)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://www.springer.com/gp/book/9783319412122" target="_blank">
+                            <div class="button">Springer</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="year-2015" id="year-2015">
+              <h3>2015</h3>
+              <ol start="4">
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span>, A. Traulsen, and T. Galla</div>
+                              <div class="OA"></div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">When the mean is not enough: Calculating fixation time distributions in birth-death processes</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference">Phys. Rev. E 92, 042154 (2015)&emsp;(DOI: 10.1103/PhysRevE.92.042154)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1103/PhysRevE.92.042154" target="_blank">
+                            <div class="button">APS</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1504.04249" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span>, F. Michor, and T. Galla</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">Stochastic tunneling and metastable states during the somatic evolution of cancer</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference">Genetics 199, 1213-1228 (2015)&emsp;(DOI: 10.1534/genetics.114.171553)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1534/genetics.114.171553" target="_blank">
+                            <div class="button">Genetics</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1408.5729" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="year-2014" id="year-2014">
+              <h3>2014</h3>
+              <ol start="2">
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span>, P.M. Altrock, and T. Galla</div>
+                              <div class="OA"></div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">Fixation in finite populations evolving in fluctuating environments</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference">J. R. Soc. Interface 11, 20140663 (2014)&emsp;(DOI: 10.1098/rsif.2014.0663)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1098/rsif.2014.0663" target="_blank">
+                            <div class="button">Royal Society</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1406.5619" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+            <div class="year-2013" id="year-2013">
+              <h3>2013</h3>
+              <ol start="1">
+                <li>
+                  <div class="paper">
+                    <table>
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <div class="paper-authors"><span class="me">P. Ashcroft</span> and T. Galla</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-title">Pattern formation in individual-based systems with time-varying parameters</div>
+                            </tr>
+                            <tr>
+                              <div class="paper-reference">Phys. Rev. E 88, 062104 (2013)&emsp;(DOI: 10.1103/PhysRevE.88.062104)</div>
+                            </tr>
+                          </table>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://dx.doi.org/10.1103/PhysRevE.88.062104" target="_blank">
+                            <div class="button">APS</div>
+                          </a>
+                        </td>
+                        <td style="width:10px;"></td>
+                        <td>
+                          <a href="http://arxiv.org/abs/1308.6101" target="_blank">
+                            <div class="button">arXiv</div>
+                          </a>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </li>
+              </ol>
+            </div>
+
+          </div>
         </div>
-
-
-
-        <div class="years">
-          <div class="year-2017" id="year-2017">
-            <h3>2017</h3>
-            <ol start="7">
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span>, M.G. Manz, and S. Bonhoeffer</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">Clonal Dominance and Transplantation Dynamics in Hematopoietic Stem Cell Compartments</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference"> PLoS Comput. Biol. 13 (2017)&emsp;(DOI: 10.1371/journal.pcbi.1005803)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1371/journal.pcbi.1005803" target="_blank">
-                          <div class="button">PLoS</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1707.04194" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span>, C.E.R. Smith, M. Garrod, and T. Galla</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">Effects of population growth on the success of invading mutants</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference">J. Theor. Biol. 420 (2017)&emsp;(DOI: 10.1016/j.jtbi.2017.03.014)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1016/j.jtbi.2017.03.014" target="_blank">
-                          <div class="button">Elsevier</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1609.06742" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-
-          <div class="year-2016" id="year-2016">
-            <h3>2016</h3>
-            <ol start="5">
-              <li>
-                <div class="book">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="book-authors"><span class="me">P. Ashcroft</span></div>
-                          </tr>
-                          <tr>
-                            <div class="book-title">The statistical physics of fixation and equilibration in individual-based models</div>
-                          </tr>
-                          <tr>
-                            <div class="book-reference">Springer International Publishing, Switzerland (2016)&emsp;(DOI: 10.1007/978-3-319-41213-9)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://www.springer.com/gp/book/9783319412122" target="_blank">
-                          <div class="button">Springer</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-          <div class="year-2015" id="year-2015">
-            <h3>2015</h3>
-            <ol start="4">
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span>, A. Traulsen, and T. Galla</div>
-                            <div class="OA"></div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">When the mean is not enough: Calculating fixation time distributions in birth-death processes</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference">Phys. Rev. E 92, 042154 (2015)&emsp;(DOI: 10.1103/PhysRevE.92.042154)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1103/PhysRevE.92.042154" target="_blank">
-                          <div class="button">APS</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1504.04249" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span>, F. Michor, and T. Galla</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">Stochastic tunneling and metastable states during the somatic evolution of cancer</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference">Genetics 199, 1213-1228 (2015)&emsp;(DOI: 10.1534/genetics.114.171553)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1534/genetics.114.171553" target="_blank">
-                          <div class="button">Genetics</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1408.5729" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-          <div class="year-2014" id="year-2014">
-            <h3>2014</h3>
-            <ol start="2">
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span>, P.M. Altrock, and T. Galla</div>
-                            <div class="OA"></div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">Fixation in finite populations evolving in fluctuating environments</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference">J. R. Soc. Interface 11, 20140663 (2014)&emsp;(DOI: 10.1098/rsif.2014.0663)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1098/rsif.2014.0663" target="_blank">
-                          <div class="button">Royal Society</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1406.5619" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-          <div class="year-2013" id="year-2013">
-            <h3>2013</h3>
-            <ol start="1">
-              <li>
-                <div class="paper">
-                  <table>
-                    <tr>
-                      <td>
-                        <table>
-                          <tr>
-                            <div class="paper-authors"><span class="me">P. Ashcroft</span> and T. Galla</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-title">Pattern formation in individual-based systems with time-varying parameters</div>
-                          </tr>
-                          <tr>
-                            <div class="paper-reference">Phys. Rev. E 88, 062104 (2013)&emsp;(DOI: 10.1103/PhysRevE.88.062104)</div>
-                          </tr>
-                        </table>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://dx.doi.org/10.1103/PhysRevE.88.062104" target="_blank">
-                          <div class="button">APS</div>
-                        </a>
-                      </td>
-                      <td style="width:10px;"></td>
-                      <td>
-                        <a href="http://arxiv.org/abs/1308.6101" target="_blank">
-                          <div class="button">arXiv</div>
-                        </a>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </li>
-            </ol>
-          </div>
-
-        </div>
-
       </div>
     </div>
 
     <!-- code -->
     <div class="code" id="code">
       <div class="container">
-        <h2>Code</h2>
-        <table class="empty-table">
-          <tr>
-            <td>
-              <p>Check out my GitHub account here:</p>
-            </td>
-            <td style="width:10px;"></td>
-            <td>
-              <a href="https://github.com/ashcroftp" target="_blank">
-                <div class="button">GitHub</div>
-              </a>
-            </td>
-          </tr>
-        </table>
-
+        <div class="block">
+          <h2>Code</h2>
+          <table class="empty-table">
+            <tr>
+              <td>
+                <p>Check out my GitHub account here:</p>
+              </td>
+              <td style="width:10px;"></td>
+              <td>
+                <a href="https://github.com/ashcroftp" target="_blank">
+                  <div class="button">GitHub</div>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
 
     <!-- cv -->
     <div class="cv" id="cv">
       <div class="container">
-        <h2>CV</h2>
-        <ul>
-          <li><b>2015 &mdash; present:</b> PostDoc with Sebastian Bonhoeffer in Theoretical Biology at ETH Z&uuml;rich.</li>
-          <li><b>2012 &mdash; 2015:</b> PhD with Tobias Galla in the Complex Systems and Statistical Physics group at The University of Manchester, UK.</li>
-          <li><b>2008 &mdash; 2012:</b> Undergraduate Maths and Physics degree (M.Math and Phys) at The University of Manchester, UK.</li>
-        </ul>
-        <table class="empty-table">
-          <tr>
-            <td>
-              <p>You can also view my full CV here: </p>
-            </td>
-            <td style="width:10px;"></td>
-            <td>
-              <a href="./aa-cv.pdf" target="_blank">
-                <div class="button">CV</div>
-              </a>
-            </td>
-          </tr>
-        </table>
+        <div class="block">
+          <h2>CV</h2>
+          <ul>
+            <li><b>2015 &mdash; present:</b> PostDoc with Sebastian Bonhoeffer in Theoretical Biology at ETH Z&uuml;rich.</li>
+            <li><b>2012 &mdash; 2015:</b> PhD with Tobias Galla in the Complex Systems and Statistical Physics group at The University of Manchester, UK.</li>
+            <li><b>2008 &mdash; 2012:</b> Undergraduate Maths and Physics degree (M.Math and Phys) at The University of Manchester, UK.</li>
+          </ul>
+          <table class="empty-table">
+            <tr>
+              <td>
+                <p>You can also view my full CV here: </p>
+              </td>
+              <td style="width:10px;"></td>
+              <td>
+                <a href="./aa-cv.pdf" target="_blank">
+                  <div class="button">CV</div>
+                </a>
+              </td>
+            </tr>
+          </table>
+        </div>
       </div>
     </div>
 
     <!-- contact -->
     <div class="contact" id="contact">
       <div class="container">
-        <h2>Contact</h2>
-        <p>
-          You can email me at <span class="me">peter.ashcroft(at)env.ethz.ch</span>.
-        </p>
-        <p>
-          Occasionly I tweet <a href="https://twitter.com/Peter_Ashcroft" class="twitter-follow-button" data-show-count="false" target="_blank">@Peter_Ashcroft</a>
-          <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </p>
-        <table class="empty-table">
-          <tr>
-            <td>
-              <p>Further details can be found on our groups page.</p>
-            </td>
-            <td style="width:10px;"></td>
-            <td>
-              <a href="http://www.tb.ethz.ch/people/person-detail.html?persid=220448" target="_blank">
-                <div class="button">tb.ethz.ch</div>
-              </a>
-            </td>
-          </tr>
-        </table>
-        <p>
-          My natural habitat is located in the Umweltsystemwissenschaften department at ETH Z&uuml;rich, and my niche is:<br> &emsp;CHN H74<br> &emsp;Universit&auml;tstrasse 16<br> &emsp;8092 Z&uuml;rich<br> &emsp;Switzerland
-          <br>
-        </p>
-
+        <div class="block">
+          <h2>Contact</h2>
+          <p>
+            You can email me at <span class="me">peter.ashcroft(at)env.ethz.ch</span>.
+          </p>
+          <p>
+            Occasionly I tweet <a href="https://twitter.com/Peter_Ashcroft" class="twitter-follow-button" data-show-count="false" target="_blank">@Peter_Ashcroft</a>
+            <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+          </p>
+          <table class="empty-table">
+            <tr>
+              <td>
+                <p>Further details can be found on our groups page.</p>
+              </td>
+              <td style="width:10px;"></td>
+              <td>
+                <a href="http://www.tb.ethz.ch/people/person-detail.html?persid=220448" target="_blank">
+                  <div class="button">tb.ethz.ch</div>
+                </a>
+              </td>
+            </tr>
+          </table>
+          <p>
+            My natural habitat is located in the Umweltsystemwissenschaften department at ETH Z&uuml;rich, and my niche is:<br> &emsp;CHN H74<br> &emsp;Universit&auml;tstrasse 16<br> &emsp;8092 Z&uuml;rich<br> &emsp;Switzerland
+            <br>
+          </p>
+        </div>
       </div>
     </div>
 
@@ -522,54 +529,54 @@
     <!-- for-fun -->
     <div class="for-fun" id="for-fun">
       <div class="container">
+        <div class="block">
+          <h2>For fun</h2>
+          <h3>Academic Genealogy</h3>
+          <p>
+            <span class="me">Peter Ashcroft</span> &larr; Tobias Galla &larr; David Sherrington &larr; Samuel Edwards &larr; Julian Schwinger &larr; Isidor Isaac Rabi &larr; Albert Potter Wills &larr; Arthur Gordon Webster &larr; Hermann von Helmholtz
+          </p>
+          <table class="empty-table">
+            <tr>
+              <td>
+                <p>This information is made available by the Mathematics Genealogy Project: </p>
+              </td>
+              <td style="width:10px;"></td>
+              <td>
+                <a href="https://genealogy.math.ndsu.nodak.edu/index.php" target="_blank">
+                  <div class="button">MGP</div>
+                </a>
+              </td>
+            </tr>
+          </table>
 
-        <h2>For fun</h2>
-        <h3>Academic Genealogy</h3>
-        <p>
-          <span class="me">Peter Ashcroft</span> &larr; Tobias Galla &larr; David Sherrington &larr; Samuel Edwards &larr; Julian Schwinger &larr; Isidor Isaac Rabi &larr; Albert Potter Wills &larr; Arthur Gordon Webster &larr; Hermann von Helmholtz
-        </p>
-        <table class="empty-table">
-          <tr>
-            <td>
-              <p>This information is made available by the Mathematics Genealogy Project: </p>
-            </td>
-            <td style="width:10px;"></td>
-            <td>
-              <a href="https://genealogy.math.ndsu.nodak.edu/index.php" target="_blank">
-                <div class="button">MGP</div>
-              </a>
-            </td>
-          </tr>
-        </table>
+          <h3>Cycling</h3>
+          <p>You can see what I get up to on two wheels here &rarr;
+            <style>
+              .strava-badge- {
+                display: inline-block;
+                height: 24px;
+              }
 
-        <h3>Cycling</h3>
-        <p>You can see what I get up to on two wheels here &rarr;
-          <style>
-            .strava-badge- {
-              display: inline-block;
-              height: 24px;
-            }
+              .strava-badge- img {
+                visibility: hidden;
+                height: 24px;
+              }
 
-            .strava-badge- img {
-              visibility: hidden;
-              height: 24px;
-            }
+              .strava-badge-:hover {
+                background-position: 0 -37px;
+              }
 
-            .strava-badge-:hover {
-              background-position: 0 -37px;
-            }
-
-            .strava-badge-follow {
-              height: 24px;
-              width: 24px;
-              background: url(//badges.strava.com/echelon-sprite-24.png) no-repeat 0 0;
-            }
-          </style>
-          <a href="http://strava.com/athletes/19561258/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-24.png" alt="Strava" /></a>
-        </p>
+              .strava-badge-follow {
+                height: 24px;
+                width: 24px;
+                background: url(//badges.strava.com/echelon-sprite-24.png) no-repeat 0 0;
+              }
+            </style>
+            <a href="http://strava.com/athletes/19561258/badge" class="strava-badge- strava-badge-follow" target="_blank"><img src="//badges.strava.com/echelon-sprite-24.png" alt="Strava" /></a>
+          </p>
+        </div>
       </div>
     </div>
-
 
   </div>
   <!-- End of content -->

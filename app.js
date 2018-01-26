@@ -6,5 +6,5 @@ $('.publications .years ol').each(function() {
 
 /* Scroll includes buffer to avoid top-menu-bar */
 $(window).on("hashchange", function() {
-  window.scrollTo(window.scrollX, window.scrollY - 130);
+  window.scrollTo(window.scrollX, window.scrollY - 120);
 });

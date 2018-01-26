@@ -23,7 +23,8 @@ body {
   width: 100%;
   position: fixed;
   top: 0px;
-  padding: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background: var(--base-colour);
 }
 
@@ -33,7 +34,7 @@ body {
   background: var(--base-colour);
   border-bottom: 2px solid var(--accent-colour);
   margin: 0px auto;
-  width: 75%;
+  width: 80%;
 }
 
 /* Title text formatting */
@@ -42,30 +43,28 @@ body {
   color: var(--text-colour);
   font-size: 25px;
   font-weight: 400;
-  padding-bottom: 5px;
-  padding-top: 4px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
 }
 
-/* Menu underneath my title */
+/* Navigation menu underneath my title */
 
-.menu {
+nav {
   font-size: 20px;
   text-align: center;
 }
 
-.menu ul {
+nav ul {
   list-style: none;
   padding-left: 0;
 }
 
-.menu li {
+nav li {
   display: inline;
 }
 
-.menu li a {
+nav li a {
   color: var(--text-colour);
   font-weight: 300;
   text-decoration: none;
@@ -73,28 +72,30 @@ body {
   padding: 10px;
 }
 
-.menu li a:link {}
+nav li a:link {}
 
-.menu li a:visited {}
+nav li a:visited {}
 
-.menu li a:hover {
+nav li a:hover {
   color: var(--accent-colour)
 }
-
 
 /* Content */
 
 .content {
   width: 100%;
   background: var(--base-colour);
-  margin: 130px auto;
+  margin-top: 120px;
 }
 
 .content .container {
   width: 80%;
   margin: 10px auto;
-  padding: 5px 10px;
   background-color: #f2f2f2;
+}
+
+.content .container .block {
+  padding: 2px 10px;
 }
 
 .content h2 {
@@ -152,7 +153,7 @@ body {
 }
 
 .content .button:hover {
-    background: var(--accent-colour-fade);
+  background: var(--accent-colour-fade);
 }
 
 .content .empty-table {
