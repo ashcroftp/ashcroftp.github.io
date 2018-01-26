@@ -1,37 +1,44 @@
-/*Colors: Main blue #1F407A   Green #82BE1E */
+/* Variable definitions */
 
-/* Purple #6C2F91  */
-
-/* Color classes */
 :root {
-    --base-colour: white;
-    --accent-colour: #6C2F91;
-    --accent-colour-fade: #AA4AE6;
-    --text-colour: black;
+  --base-colour: white;
+  --accent-colour: #6C2F91;
+  --accent-colour-fade: #AA4AE6;
+  --text-colour: black;
 }
 
 /* Initial body */
+
 body {
-  left: 0;
   margin: 0;
-  /*overflow: hidden;*/
-  position: relative;
   font-family: 'Source Sans Pro', sans-serif;
+  background: var(--base-colour)
 }
 
-/* Top menu bar */
+/* Header */
 
-.top-menu-bar {
-  background-color: var(--base-colour);
+/* First the container to allow centering, and to fix position */
+
+.header-cont {
+  width: 100%;
   position: fixed;
   top: 0px;
-  width: 100%;
-  height: 41px;
-  z-index: 100;
-  border-bottom: 2px solid var(--accent-colour);
+  padding: 10px;
+  background: var(--base-colour);
 }
 
-.top-menu-bar .my-header {
+/* Now the header style itself */
+
+.header {
+  background: var(--base-colour);
+  border-bottom: 2px solid var(--accent-colour);
+  margin: 0px auto;
+  width: 75%;
+}
+
+/* Title text formatting */
+
+.header .my-title {
   color: var(--text-colour);
   font-size: 25px;
   font-weight: 400;
@@ -42,107 +49,50 @@ body {
   text-align: center;
 }
 
-/* Menu */
-
-.top-menu-bar .icon-menu-open {
-  color: var(--text-colour);
-  font-size: 25px;
-  font-weight: 400;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-top: 4px;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 120px;
-}
-
-.top-menu-bar .icon-menu-open i {
-  margin-right: 5px;
-}
+/* Menu underneath my title */
 
 .menu {
-  background: var(--base-colour);
-  left: -200px;
-  /* start off behind the scenes */
-  top: 41px;
-  height: 100%;
-  position: fixed;
-  width: 200px;
-  z-index: 99;
-}
-
-.menu .icon-menu-close {
-  color: var(--text-colour);
-  font-size: 25px;
-  font-weight: 300;
-  padding-bottom: 5px;
-  padding-left: 20px;
-  padding-top: 4px;
-  text-decoration: none;
-  text-transform: uppercase;
-  width: 120px;
-}
-
-.menu .icon-menu-close i {
-  margin-right: 5px;
+  font-size: 20px;
+  text-align: center;
 }
 
 .menu ul {
-  border-top: 2px solid var(--accent-colour);
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 .menu li {
-  border-bottom: 2px solid var(--accent-colour);
-  line-height: 45px;
-  padding-left: 20px;
-  padding-top: 3px;
-  padding-bottom: 3px;
+  display: inline;
 }
 
-.menu a {
+.menu li a {
   color: var(--text-colour);
-  font-size: 15px;
   font-weight: 300;
   text-decoration: none;
-  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
 }
 
-.menu a:link {}
+.menu li a:link {}
 
-.menu a:visited {}
+.menu li a:visited {}
 
-.menu a:hover {
-  font-weight: 400;
+.menu li a:hover {
+  color: var(--accent-colour)
 }
 
-/* Spacer to account for header bar*/
-
-.spacer {
-  top: 41px;
-  height: 41px;
-}
-
-/* Banner */
-
-.jumbotron {
-  position: relative;
-  height: 300px;
-  background-size: 100%;
-  background-image: url('myHead.jpg');
-  background-repeat: no-repeat;
-}
 
 /* Content */
 
 .content {
-  position: relative;
+  width: 100%;
+  background: var(--base-colour);
+  margin: 130px auto;
 }
 
 .content .container {
-  margin: 10px;
+  width: 80%;
+  margin: 10px auto;
   padding: 5px 10px;
   background-color: #f2f2f2;
 }
@@ -202,12 +152,7 @@ body {
 }
 
 .content .button:hover {
-  background: var(--accent-colour);
-  background-image: -webkit-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
-  background-image: -moz-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
-  background-image: -ms-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
-  background-image: -o-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
-  background-image: linear-gradient(to bottom, var(--accent-colour), var(--accent-colour-fade));
+    background: var(--accent-colour-fade);
 }
 
 .content .empty-table {
