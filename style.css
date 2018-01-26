@@ -1,101 +1,113 @@
 /*Colors: Main blue #1F407A   Green #82BE1E */
 
+/* Purple #6C2F91  */
+
+/* Color classes */
+:root {
+    --base-colour: white;
+    --accent-colour: #6C2F91;
+    --accent-colour-fade: #AA4AE6;
+    --text-colour: black;
+}
 
 /* Initial body */
 body {
-    left: 0;
-    margin: 0;
-    /*overflow: hidden;*/
-    position: relative;
-    font-family: 'Source Sans Pro', sans-serif;
+  left: 0;
+  margin: 0;
+  /*overflow: hidden;*/
+  position: relative;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 /* Top menu bar */
+
 .top-menu-bar {
-    background-color: #1F407A;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    height: 41px;
-    z-index: 100;
-    border-bottom: 1px solid #636366;
+  background-color: var(--base-colour);
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 41px;
+  z-index: 100;
+  border-bottom: 2px solid var(--accent-colour);
 }
 
 .top-menu-bar .my-header {
-    color: white;
-    font-size: 25px;
-    font-weight: 400;
-    padding-bottom: 5px;
-    padding-top: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    text-align: center;
+  color: var(--text-colour);
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  padding-top: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 /* Menu */
+
 .top-menu-bar .icon-menu-open {
-    color: white;
-    font-size: 25px;
-    font-weight: 400;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-top: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 120px;
+  color: var(--text-colour);
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-top: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 120px;
 }
 
 .top-menu-bar .icon-menu-open i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .menu {
-    background: #1F407A;
-    left: -200px;  /* start off behind the scenes */
-    top: 41px;
-    height: 100%;
-    position: fixed;
-    width: 200px;
-    z-index: 99;
+  background: var(--base-colour);
+  left: -200px;
+  /* start off behind the scenes */
+  top: 41px;
+  height: 100%;
+  position: fixed;
+  width: 200px;
+  z-index: 99;
 }
 
 .menu .icon-menu-close {
-    color: white;
-    font-size: 25px;
-    font-weight: 300;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-top: 4px;
-    text-decoration: none;
-    text-transform: uppercase;
-    width: 120px;
+  color: var(--text-colour);
+  font-size: 25px;
+  font-weight: 300;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-top: 4px;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 120px;
 }
 
 .menu .icon-menu-close i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 
 .menu ul {
-    border-top: 1px solid #636366;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  border-top: 2px solid var(--accent-colour);
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
-    border-bottom: 1px solid #636366;
-    line-height: 45px;
-    padding-left: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;
+  border-bottom: 2px solid var(--accent-colour);
+  line-height: 45px;
+  padding-left: 20px;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .menu a {
-    color: white;
-    font-size: 15px;
-    font-weight: 300;
-    text-decoration: none;
-    text-transform: uppercase;
+  color: var(--text-colour);
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .menu a:link {}
@@ -103,224 +115,248 @@ body {
 .menu a:visited {}
 
 .menu a:hover {
-    font-weight: 400;
+  font-weight: 400;
 }
 
 /* Spacer to account for header bar*/
-.spacer {
-    top: 41px;
-    height: 41px;
-}
 
+.spacer {
+  top: 41px;
+  height: 41px;
+}
 
 /* Banner */
+
 .jumbotron {
-    position: relative;
-    height: 300px;
-    background-size: 100%;
-    background-image: url('myHead.jpg');
-    background-repeat: no-repeat;
+  position: relative;
+  height: 300px;
+  background-size: 100%;
+  background-image: url('myHead.jpg');
+  background-repeat: no-repeat;
 }
 
-
-
-
-
 /* Content */
+
 .content {
-    position: relative;
+  position: relative;
 }
 
 .content .container {
-    margin: 10px;
-    padding: 5px 10px;
-    background-color: #f2f2f2;
+  margin: 10px;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
 }
 
 .content h2 {
-    color: black;
-    font-size: 25px;
-    font-weight: 400;
-    text-decoration: none;
-    text-transform: uppercase;
-    vertical-align: top;
-    margin: 0px;
+  color: var(--text-colour);
+  font-size: 25px;
+  font-weight: 400;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+  margin: 0px;
 }
 
 .content h3 {
-    color: black;
-    font-size: 20px;
-    font-weight: 400;
-    text-decoration: none;
-    vertical-align: top;
-    margin: 0px;
-    clear: left;
+  color: var(--text-colour);
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  vertical-align: top;
+  margin: 0px;
+  clear: left;
 }
 
 .content p {
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    margin-bottom: 5px;
-    text-decoration: none;
+  color: var(--text-colour);
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  text-decoration: none;
 }
 
 .content a {
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-    text-decoration: none;
+  color: var(--text-colour);
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
 }
+
 .content a:link {}
+
 .content a:visited {}
-.content a:hover {font-weight: 400;}
+
+.content a:hover {
+  font-weight: 400;
+}
 
 .content .button {
-    color: white;
-    background-color: #1F407A;
-    margin: 0;
-    padding: 4px 10px 5px;
-    text-align: center;
+  color: var(--base-colour);
+  background-color: var(--accent-colour);
+  margin: 0;
+  padding: 4px 10px 5px;
+  text-align: center;
 }
+
 .content .button:hover {
-    background: #1F407A;
-    background-image: -webkit-linear-gradient(top, #1F407A, #3062b8);
-    background-image: -moz-linear-gradient(top, #1F407A, #3062b8);
-    background-image: -ms-linear-gradient(top, #1F407A, #3062b8);
-    background-image: -o-linear-gradient(top, #1F407A, #3062b8);
-    background-image: linear-gradient(to bottom, #1F407A, #3062b8);
+  background: var(--accent-colour);
+  background-image: -webkit-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
+  background-image: -moz-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
+  background-image: -ms-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
+  background-image: -o-linear-gradient(top, var(--accent-colour), var(--accent-colour-fade));
+  background-image: linear-gradient(to bottom, var(--accent-colour), var(--accent-colour-fade));
 }
 
 .content .empty-table {
-    border-collapse: collapse;
+  border-collapse: collapse;
 }
 
 .content .empty-table td {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .content .me {
-    color: #1F407A;
-    font-weight: 400;
+  color: var(--accent-colour);
+  font-weight: 400;
 }
 
 .my-research .project {
-    clear: left;
-    overflow: hidden;
-    margin-bottom: 10px;
+  clear: left;
+  overflow: hidden;
+  margin-bottom: 10px;
 }
 
 .my-research .project .title {
-    color: black;
-    font-weight: 400;
-    font-size: 20px;
+  color: var(--text-colour);
+  font-weight: 400;
+  font-size: 20px;
 }
 
 .my-research .project .my-image {
-    width: 20%;
-    float: left;
-    display: block;
-    margin-left: 0px;
-    margin-right: 10px;
+  width: 20%;
+  float: left;
+  display: block;
+  margin-left: 0px;
+  margin-right: 10px;
 }
 
 .my-research .project .description {
-    overflow: auto;
+  overflow: auto;
 }
 
 .publications .years ol {
-    list-style: none;
-    padding: 0px;
-    margin-top: 10px;
-    margin-bottom: 5px;
+  list-style: none;
+  padding: 0px;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }
 
-.publications .years ol> li {
-    counter-increment: c -1;
-    border-top: 2px solid #1F407A;
-    font-size: 15px;
+.publications .years ol>li {
+  counter-increment: c -1;
+  border-top: 2px solid var(--accent-colour);
+  font-size: 15px;
 }
 
-.publications .years ol> li:before {
-    content: counter(c);
-    color: white;
-    font-weight: 400;
-    text-align: center;
-    background-color: #1F407A;    
-    padding: 0px 8px 2px;
-    margin-right: 10px; 
-    float: left;
+.publications .years ol>li:before {
+  content: counter(c);
+  color: var(--base-colour);
+  font-weight: 400;
+  text-align: center;
+  background-color: var(--accent-colour);
+  padding: 0px 8px 2px;
+  margin-right: 10px;
+  float: left;
 }
 
-.publications .years .paper {
+.publications .years .paper {}
+
+.publications .years .paper-authors {
+  font-weight: 300;
+  float: left;
 }
 
-.publications .years .paper-authors {font-weight: 300; float: left;}
-.publications .years .paper-title {font-weight: 400; clear: left;}
-.publications .years .paper-reference {font-weight: 300;}
-
-.publications .years .book {
+.publications .years .paper-title {
+  font-weight: 400;
+  clear: left;
 }
 
-.publications .years .book-authors {font-weight: 300; float: left;}
-.publications .years .book-title {font-weight: 400; clear: left;}
-.publications .years .book-reference {font-weight: 300;}
+.publications .years .paper-reference {
+  font-weight: 300;
+}
+
+.publications .years .book {}
+
+.publications .years .book-authors {
+  font-weight: 300;
+  float: left;
+}
+
+.publications .years .book-title {
+  font-weight: 400;
+  clear: left;
+}
+
+.publications .years .book-reference {
+  font-weight: 300;
+}
 
 .publications .OA {
-    color: #1F407A;
-    font-weight: 400;
-    float: right;}
-.publications .OA:before {
-    content: "Open Access";
+  color: var(--accent-colour);
+  font-weight: 400;
+  float: right;
 }
 
-.cv b {font-weight: 400;}
+.publications .OA:before {
+  content: "Open Access";
+}
+
+.cv b {
+  font-weight: 400;
+}
+
 .cv ul {
-    padding-left: 20px;
-    margin-right: 20px;
-    list-style-type: none;
+  padding-left: 20px;
+  margin-right: 20px;
+  list-style-type: none;
 }
 
 .cv li {
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-    padding-bottom: 10px;
-    text-decoration: none;
+  color: var(--text-colour);
+  font-size: 15px;
+  font-weight: 300;
+  padding-bottom: 10px;
+  text-decoration: none;
 }
+
 .cv li:before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background-color: #1F407A;
-    float: left;
-    margin-top: 6px;
-    margin-right: 20px;
-
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-colour);
+  float: left;
+  margin-top: 6px;
+  margin-right: 20px;
 }
-
-
 
 /* Closing */
+
 .closing {
-    text-align: center;
+  text-align: center;
 }
 
 .closing p {
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-    text-decoration: none;
+  color: var(--text-colour);
+  font-size: 15px;
+  font-weight: 300;
+  text-decoration: none;
 }
 
+/* shit */
 
-
-
-/* shit*/
 .my-blank {
-    height: 500px;
+  height: 500px;
 }
