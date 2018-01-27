@@ -6,6 +6,7 @@
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300' rel='stylesheet' type='text/css'>
   <link href='style.css' rel='stylesheet'>
   <title>Peter Ashcroft: Personal Page</title>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -16,7 +17,7 @@
       <div class="my-title">
         Peter Ashcroft, &emsp; ETH Z&uuml;rich
       </div>
-      <nav>
+      <!-- <nav>
         <ul>
           <li><a href="#about-me">About me</a></li>
           <li><a href="#my-research">My research</a></li>
@@ -26,7 +27,16 @@
           <li><a href="#contact">Contact</a></li>
           <li><a href="#for-fun">For fun</a></li>
         </ul>
-      </nav>
+      </nav> -->
+      <div id="nav-placeholder">
+
+      </div>
+
+      <script>
+        $(function() {
+          $("#nav-placeholder").load("nav.html");
+        });
+      </script>
     </div>
   </div>
 
