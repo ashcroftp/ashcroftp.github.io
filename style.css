@@ -21,7 +21,6 @@ body {
 
 .header-cont {
   width: 100%;
-  position: fixed;
   top: 0px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -85,7 +84,6 @@ nav li a:hover {
 .content {
   width: 100%;
   background: var(--base-colour);
-  margin-top: 120px;
 }
 
 .content .container {
@@ -291,6 +289,8 @@ nav li a:hover {
 /* Closing */
 
 .closing {
+  width: 80%;
+  margin: 10px auto;
   text-align: center;
 }
 
