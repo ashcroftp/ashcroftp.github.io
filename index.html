@@ -18,13 +18,13 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#about-me" onclick="openTab('about-me')" id="defaultOpen">About me</a></li>
-          <li><a href="#my-research" onclick="openTab('my-research')">My research</a></li>
-          <li><a href="#publications" onclick="openTab('publications')">Publications</a></li>
-          <li><a href="#code" onclick="openTab('code')">Code</a></li>
-          <li><a href="#cv" onclick="openTab('cv')">CV</a></li>
-          <li><a href="#contact" onclick="openTab('contact')">Contact</a></li>
-          <li><a href="#for-fun" onclick="openTab('for-fun')">For fun</a></li>
+          <li><a href="#about-me" onclick="openTab('about-me')" id="defaultOpen">about me</a></li>
+          <li><a href="#my-research" onclick="openTab('my-research')">my research</a></li>
+          <li><a href="#publications" onclick="openTab('publications')">publications</a></li>
+          <li><a href="#code" onclick="openTab('code')">apps &amp; code</a></li>
+          <li><a href="#cv" onclick="openTab('cv')">cv</a></li>
+          <li><a href="#contact" onclick="openTab('contact')">contact</a></li>
+          <li><a href="#for-fun" onclick="openTab('for-fun')">for fun</a></li>
         </ul>
       </nav>
     </div>
@@ -198,10 +198,38 @@
 
 
             <div class="years">
-              <!--<div class="year-2018" id="year-2018">
-              <h3>2018</h3>
-              <ol start="7">
-            </div>-->
+              <div class="year-2018" id="year-2018">
+                <h3>2018</h3>
+                <ol start="8">
+                  <li>
+                    <div class="paper">
+                      <table>
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <div class="paper-authors">Jeffrey West, Derek Park, Cathal Harmon, Drew Williamson, <span class="me">Peter Ashcroft</span>, Davide Maestrini, Alexandra Ardaseva, Rafael Bravo, Prativa Sahoo, Hung Khong, Kimberly Luddy, Mark Robertson-Tessi</div>
+                              </tr>
+                              <tr>
+                                <div class="paper-title">Evolutionary exploitation of PD-L1 expression in hormone receptor positive breast cancer</div>
+                              </tr>
+                              <tr>
+                                <div class="paper-reference"> bioRxiv (DOI: 10.1101/454447)</div>
+                              </tr>
+                            </table>
+                          </td>
+                          <td style="width:10px;"></td>
+                          <td>
+                            <a href="https://doi.org/10.1101/454447" target="_blank">
+                              <div class="button">bioRxiv</div>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </li>
+                </ol>
+              </div>
               <div class="year-2017" id="year-2017">
                 <h3>2017</h3>
                 <ol start="7">
@@ -215,7 +243,7 @@
                                 <div class="paper-authors"><span class="me">P. Ashcroft</span>, M.G. Manz, and S. Bonhoeffer</div>
                               </tr>
                               <tr>
-                                <div class="paper-title">Clonal Dominance and Transplantation Dynamics in Hematopoietic Stem Cell Compartments</div>
+                                <div class="paper-title">Clonal dominance and transplantation dynamics in hematopoietic stem cell compartments</div>
                               </tr>
                               <tr>
                                 <div class="paper-reference"> PLoS Comput. Biol. 13 (2017)&emsp;(DOI: 10.1371/journal.pcbi.1005803)</div>
@@ -473,11 +501,35 @@
       <div class="code" id="code">
         <div class="container">
           <div class="block">
-            <h2>Code</h2>
+            <h2>Apps</h2>
+            <p>
+              I used R-shiny a couple of times to make my work interactive.
+              Here's a couple of examples:
+            </p>
             <table class="empty-table">
               <tr>
                 <td>
-                  <p>Check out my GitHub account here:</p>
+                  <a href="https://ashcroftp.shinyapps.io/IMO-ODE-solver/" target="_blank">
+                  <div class="button">PDL-1</div>
+                </td>
+                <td style="width:10px;"></td>
+                <td>
+                  <a href="https://ibz-shiny.ethz.ch/ashcroft/MPNBurden/bb-code/Shiny/ClonalFractionMPN/" target="_blank">
+                  <div class="button">MPN clonal fraction</div>
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="container">
+          <div class="block">
+            <h2>Code</h2>
+            <p>A lot of my code is stored on the ETH GitLab server, so isn't publicly available while in development.</p>
+            <table class="empty-table">
+              <tr>
+                <td>
+                  <p>But I keep some things on my public GitHub account, including this webpage:</p>
                 </td>
                 <td style="width:10px;"></td>
                 <td>
@@ -537,7 +589,7 @@
             <table class="empty-table">
               <tr>
                 <td>
-                  <p>Further details can be found on our groups page.</p>
+                  <p>Further details can be found on our groups page:</p>
                 </td>
                 <td style="width:10px;"></td>
                 <td>
