@@ -1,0 +1,82 @@
+% Report template
+% Author: Peter Ashcroft, ETH Zurich
+
+\documentclass[a4paper,11pt]{article}
+\usepackage{blue}
+\usepackage{amsmath}
+
+\newcommand{\avg}[1]{\left\langle #1 \right\rangle}
+
+% Personal data
+\name{Peter Ashcroft}
+\title{Likelihood of mean vs replicates}
+\subtitle{}
+\address{Institute for Integrative Biology}{ETH Z\"urich}{}%Universit\"atstrasse 16, Z\"urich, 8092}
+%\phone{+41~(0)44~633~60~34}
+\email{peter.ashcroft@env.ethz.ch}
+\homepage{ashcroftp.github.io}
+\header{Likelihood of mean vs replicates}
+
+\begin{document}
+\maketitlebox
+
+\textbf{Is the likelihood of the a set of replicate observations equivalent to the likelihood of the mean of those replicates?}
+
+\section*{Question formulation}
+Suppose we have a dataset $\{z_1,z_2,\dots,z_n\}$, for which we have a model $\theta$ which predicts a value $\widehat{z}$ to match these observations.
+Assuming the $z_i$ are normally distributed, the likelihood of observing this data given the model $\theta$ is
+\begin{equation}
+\mathcal{L}(\{z_1,z_2,\dots,z_n\} | \theta) = \prod_{i=1}^n \frac{1}{\sqrt{2\pi\sigma^2}}\exp\left(-\frac{(z_i - \widehat{z})^2}{2\sigma^2}\right), \label{eq:repLikelihood}
+\end{equation}
+where $\sigma$ is the observation error, which we assume to be given by the standard deviation of $\{z_1,z_2,\dots,z_n\}$.
+The log-likelihood is given by
+\begin{equation}
+\ln \mathcal{L}(\{z_1,z_2,\dots,z_n\} | \theta) = -\frac{n}{2}\ln(2\pi\sigma^2) - \sum_{i=1}^n\frac{(z_i - \widehat{z})^2}{2\sigma^2}. \nonumber
+\end{equation}
+
+Alternatively, instead of considering each individual replicate of data, we could instead fit just the mean $\overline{z} = (\sum_{i=1}^n z_i)/n$, with the likelihood now given by
+\begin{equation}
+\mathcal{L}(\overline{z} | \theta) = \frac{1}{\sqrt{2\pi\overline{\sigma}^2}}\exp\left(-\frac{(\overline{z} - \widehat{z})^2}{2\overline{\sigma}^2}\right), \label{eq:meanLikelihood}
+\end{equation}
+where $\overline{\sigma}$ is the error of the mean.
+The log-likelihood is given by
+\begin{equation}
+\ln \mathcal{L}(\overline{z} | \theta) = -\frac{1}{2}\ln(2\pi\overline{\sigma}^2) - \frac{(\overline{z} - \widehat{z})^2}{2\sigma^2}. \nonumber
+\end{equation}
+
+The question I ask here is, are these two formulations equivalent?
+
+\section*{Solution}
+We can manipulate Eq.~\eqref{eq:repLikelihood} to produce the following expression:
+\begin{equation}
+\mathcal{L}(\{z_1,z_2,\dots,z_n\} | \theta) = \dfrac{1}{\left(2\pi n\frac{\sigma^2}{n} e\right)^{\frac{n}{2}}} \exp\left(-\dfrac{(\avg{z} - \widehat{z})^2}{2\frac{\sigma^2}{n}}\right).
+\end{equation}
+where $\sigma/\sqrt{n}$ is the standard error of the mean (SEM).
+
+We see that the exponential term of the likelihood has a direct agreement with $\mathcal{L}(\overline{z} | \theta)$ [Eq.~\eqref{eq:meanLikelihood}] using $\overline{\sigma} = \sigma / \sqrt{n}$.
+However, the prefactor is incomparable between the two formulations.
+
+Therefore, there is no direct equivalence between the likelihood of the individual replicates and the likelihood of the mean.
+
+\section*{Explicit calculation}
+Explicitly, we use the following expressions:
+%\begin{subequations}
+\begin{align*}
+\avg{z} &= \frac{\sum_{i=1}^n z_i}{n}, \\
+\avg{z^2} &= \frac{\sum_{i=1}^n z_i^2}{n}, \\
+\rm{var}(z) &= \avg{z^2} - \avg{z}^2 = \sigma^2,
+\end{align*}
+%\end{subequations}
+and then Eq.~(\ref{eq:repLikelihood}) can be treated as
+\begin{align*}
+\mathcal{L}(\{z_1,z_2,\dots,z_n\} | \theta)
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{\sum_{i=1}^n (z_i - \widehat{z})^2}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{\sum_{i=1}^n (z_i^2 - 2 z_i \widehat{z} - \widehat{z}^2)}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{(n\avg{z^2} - 2n \avg{z} \widehat{z} - n\widehat{z}^2)}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{n(\rm{var}(z) + \avg{z}^2 - 2 \avg{z} \widehat{z} - \widehat{z}^2)}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{n \, \rm{var}(z)}{2\sigma^2}\right)\exp\left(-\dfrac{n(\avg{z}^2 - 2 \avg{z} \widehat{z} - \widehat{z}^2)}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2\right)^{-\frac{n}{2}}\exp\left(-\dfrac{n \sigma^2}{2\sigma^2}\right)\exp\left(-\dfrac{n(\avg{z} - \widehat{z})^2}{2\sigma^2}\right) \\
+&= \left(2\pi\sigma^2 e\right)^{-\frac{n}{2}} \exp\left(-\dfrac{(\avg{z} - \widehat{z})^2}{2\frac{\sigma^2}{n}}\right).
+\end{align*}
+
+\end{document}

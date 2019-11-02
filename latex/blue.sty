@@ -1,0 +1,286 @@
+% blue.sty
+% Style file for my blue theme
+% Author: Peter Ashcroft, ETH Zurich
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{blue}[2018/09/13 Style file for my blue theme for different documents]
+
+%------------------------
+%% Required packages
+%------------------------
+% Adjust the page margins with geometry
+\RequirePackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+% Colour
+\RequirePackage{xcolor}
+% Modify section headings etc.
+\RequirePackage{titlesec}
+% Add spaces between paragraphs
+\RequirePackage{parskip}
+% Define linespacing
+\RequirePackage{setspace}
+% Figures
+\RequirePackage{graphicx}
+% Headers and footers
+\RequirePackage{fancyhdr}
+% Logical constructs
+\RequirePackage{ifthen}
+% Size calculations
+\RequirePackage{calc}
+% Symbols for phone, email, and webpage
+\RequirePackage{marvosym}
+% Citations
+\RequirePackage{cite}
+% Lists
+\RequirePackage{enumitem}
+% Hyperrefs
+\RequirePackage{hyperref}
+\RequirePackage{doi}
+% Captions
+\RequirePackage{caption}
+
+%------------------------
+%% Elements to be defined
+%------------------------
+\newcommand*{\name}[1]{\def\@name{#1}}
+\renewcommand*{\title}[1]{\def\@title{#1}}
+\newcommand*{\subtitle}[1]{\def\@subtitle{#1}}
+\newcommand*{\address}[3]{\def\@addressone{#1}\def\@addresstwo{#2}\def\@addressthree{#3}}
+\newcommand*{\phone}[1]{\def\@phone{#1}}
+\newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\homepage}[1]{\def\@homepage{#1}}
+\newcommand*{\projecttitle}[1]{\def\projecttitle{#1}}
+\newcommand*{\header}[1]{\def\@header{#1}}
+% For letter
+\newcommand*{\recipient}[2]{\def\@recipientname{#1}\def\@recipientaddress{#2}}
+\renewcommand*{\date}[1]{\def\@date{#1}}\date{\today}
+\newcommand*{\opening}[1]{\def\@opening{#1}}
+\newcommand*{\closing}[1]{\def\@closing{#1}}
+\newcommand*{\enclosure}[1]{\def\@enclosure{#1}}
+
+%------------------------
+%% Colours
+%------------------------
+\definecolor{color0}{rgb}{0,0,0} % black
+\definecolor{color1}{rgb}{0.22,0.45,0.70} % light blue
+\definecolor{color2}{rgb}{0.45,0.45,0.45} % dark grey
+
+%------------------------
+%% Symbols used in the doc
+%------------------------
+\newcommand*{\marvosymbol}[1]{{\fontfamily{mvs}\fontencoding{U}\fontseries{m}\fontshape{n}\selectfont\char#1}}
+\newcommand*{\phonesymbol}{\textcolor{color2}{\marvosymbol{84}}~}
+\newcommand*{\emailsymbol}{\textcolor{color2}{\marvosymbol{66}}~}
+\newcommand*{\homepagesymbol}{{\Large\marvosymbol{205}}~}
+\newcommand*{\point}{\textcolor{color1}{\marvosymbol{123}~}}
+
+%------------------------
+%% Some length definitions
+%------------------------
+%\setlength{\parindent}{0pt}
+% Width of year column and section heading bar
+\newlength{\sidecolumnwidth}
+\setlength{\sidecolumnwidth}{0.125\textwidth}
+% Column separator and separator between section bar and heading
+\newlength{\separatorcolumnwidth}
+\setlength{\separatorcolumnwidth}{0.02\textwidth}
+% Width of text after the side column
+\newlength{\maincolumnwidth}
+\setlength{\maincolumnwidth}{\textwidth-\separatorcolumnwidth-\sidecolumnwidth}
+% Half text width for split bullet points
+\newlength{\halfwidth}
+\setlength{\halfwidth}{0.5\maincolumnwidth}
+% Width of bullet point
+\newlength{\pointwidth}
+\settowidth{\pointwidth}{\point}
+% Width of text after bullet point
+\newlength{\listitemwidth}
+\setlength{\listitemwidth}{\maincolumnwidth-\pointwidth}
+
+%------------------------
+%% Text style definitions
+%------------------------
+% Sans-serif font
+\renewcommand{\familydefault}{\sfdefault}
+% Default text style
+\normalfont\color{color0}
+% Define section font separately
+\newcommand*{\sectionfont}{\LARGE\color{color1}}
+\newcommand*{\subsectionfont}{\Large\color{color1}}
+\newcommand*{\subsubsectionfont}{\Large\color{color2}}
+% Custom styles for title, subtitle, and address/contact details
+\newcommand{\titlestyle}[1]{{\Huge\mdseries\upshape\color{color0}{#1}}}
+\newcommand{\subtitlestyle}[1]{{\LARGE\upshape\color{color2}{#1}}}
+\newcommand{\addressstyle}[1]{{\small\upshape\color{color2}{#1}}}
+% Bar that comes before sections
+\newcommand*{\sectionbar}{\raisebox{0.4ex}{\color{color1}\rule{\sidecolumnwidth}{0.5ex}}}
+% Title, section, subsection, etc. styles
+%\titleformat{\section}[hang]{\sectionfont}{\parbox[t]{\sectionbarwidth}{\raisebox{0.1em}{\sectionbar}}\hspace{\separatorcolumnwidth}\thesection.}{0.5em}{}
+\titleformat{\section}[hang]{\sectionfont}{\sectionbar\hspace{\separatorcolumnwidth}\thesection.}{0.5em}{}
+\titleformat{name=\section,numberless}[hang]{\sectionfont}{\sectionbar\hspace{\separatorcolumnwidth}}{0em}{}
+\titlespacing*{\section}{0pt}{*4}{*0}
+\titleformat*{\subsection}{\subsectionfont}
+\titlespacing*{\subsection}{0pt}{*1}{*0}
+\titleformat*{\subsubsection}{\subsubsectionfont}
+\titlespacing*{\subsubsection}{0pt}{*0}{*0}
+
+% Description list environment definitions
+\setlist[description]{font = \normalfont\large\color{color2}, labelindent = 2em, leftmargin = 2em, rightmargin = 2em}
+%\renewcommand{\descriptionlabel}[1]{\hspace{\labelsep}\large\color{color2}{#1}}}
+
+% Note format
+\newcommand{\note}[1]{\textcolor{blue}{#1}}
+
+%------------------------
+%% Citation style definitions
+%------------------------
+\hypersetup{
+	breaklinks=true,
+	colorlinks=true,
+	linkcolor=color1,
+	citecolor=color1,
+	urlcolor=color1
+}
+%------------------------
+%% Caption style definitions
+%------------------------
+\captionsetup{font={small,color=color2}, width=0.95\textwidth}
+
+%------------------------
+%% Header and footer
+%------------------------
+\pagestyle{fancy}
+
+\renewcommand{\headrule}{\hbox to\headwidth{\color{color2}\leaders\hrule height \headrulewidth\hfill}}
+
+\lhead{}
+\chead{}
+\rhead{\color{color2}{\ifthenelse{\isundefined{\@header}}{}{\ifthenelse{\equal{\@header}{}}{\@name}{\@header~-~\@name}}}}
+\lfoot{}
+\cfoot{\color{color2}{\thepage}}
+\rfoot{}
+
+%------------------------
+%% Title box
+%------------------------
+\newcommand{\maketitlebox}{%
+	% Remove header from page 1
+	\thispagestyle{empty}
+	% Box of author details
+	%\renewcommand{\arraystretch}{0.8}
+	\newbox{\authorbox}%
+	\savebox{\authorbox}{%
+			\addressstyle{%
+				\begin{tabular}[t]{@{}r@{}}%
+					{\Large\bfseries\@name}%
+					\ifthenelse{\isundefined{\@addressone}}{}{\\\@addressone%
+					\ifthenelse{\equal{\@addresstwo}{}}{}{\\\@addresstwo}%
+					\ifthenelse{\equal{\@addressthree}{}}{}{\\\@addressthree}}%
+					\ifthenelse{\isundefined{\@phone}}{}{\\\phonesymbol\@phone}%
+					\ifthenelse{\isundefined{\@email}}{}{\\\emailsymbol\@email}%
+ 					\ifthenelse{\isundefined{\@homepage}}{}{\\\homepagesymbol\@homepage}%
+				\end{tabular}%
+    	}%
+	}%
+	% Width of author details
+	\newlength{\authorboxwidth}\settowidth{\authorboxwidth}{\usebox{\authorbox}}%
+	%
+	% Title and subtitle
+	% Define width
+  \newlength{\titleboxwidth}\setlength{\titleboxwidth}{\textwidth-\authorboxwidth-20pt}%
+  %
+  \noindent%
+	\begin{minipage}[t]{\titleboxwidth}%
+		\begin{singlespace}%
+			\vspace{-2ex}%
+			\ifthenelse{\equal{\@title}{}}{}{\raggedright\titlestyle{\noindent\@title}}%
+			\ifthenelse{\equal{\@subtitle}{}}{}{\\[0.5em]\subtitlestyle{\@subtitle}}%
+		\end{singlespace}%
+	\end{minipage}%
+	\hfill%
+	\usebox{\authorbox}%
+}%
+
+%------------------------
+%% CV elements
+%------------------------
+% \cvsection{heading}
+\newcommand*{\cvsection}[1]{%
+	{\par\addvspace{0.75ex}%
+	\sectionfont{
+	\sectionbar%
+	\hspace{\separatorcolumnwidth}%
+	#1}
+	\par\nobreak\addvspace{0.5ex}\@afterheading}% to avoid a pagebreak after the heading
+}
+
+% \cvitem{label}{text}
+\newcommand*{\cvitem}[2]{%
+  \begin{tabular}{@{}p{\sidecolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
+    \raggedleft#1 &{#2}%
+  \end{tabular}%
+  \par\addvspace{0.25em}
+}
+
+% \cventry{years}{degree/job title}{institution/employer}{details}{small details}
+\newcommand*{\cventry}[5]{%
+  \cvitem{#1}{%
+    \ifthenelse{\equal{#2}{}}{}{{\bfseries#2}}%
+    \ifthenelse{\equal{#3}{}}{}{\ifthenelse{\equal{#2}{}}{}{~}#3}%
+    \ifthenelse{\equal{#4}{}}{}{\newline#4}%
+		\ifthenelse{\equal{#5}{}}{}{\newline\small#5}%
+  }
+}
+
+% \cvlistitem{text}
+\newcommand*{\cvlistitem}[1]{\cvitem{}{\point\begin{minipage}[t]{\listitemwidth}#1\end{minipage}}}%
+
+% \cvlistdoubleitem{text1}{text2}
+\newcommand*{\cvlistdoubleitem}[2]{%
+  \cvitem{}{
+		\point\begin{minipage}[t]{\halfwidth}#1\end{minipage}%
+  	\hfill%
+  	{\point\begin{minipage}[t]{\halfwidth}#2\end{minipage}}%
+	}
+}
+
+% \mypub{title}{authors}{journal}{volume}{page}{year}
+\newcommand*{\mypub}[6]{%
+	{\slshape#1.}\newline
+	#2,~
+	#3~
+	\ifthenelse{\equal{#4}{}}{}{{\bfseries#4},~}
+	\ifthenelse{\equal{#5}{}}{}{#5~}
+	(#6).
+}
+
+%------------------------
+%% Letter elements
+%------------------------
+\newcommand{\makelettertitle}{%
+  % sender contact info
+  \maketitlebox\\%
+  % recipient block
+  \begin{minipage}[t]{.5\textwidth}%
+    \raggedright%
+    \addressstyle{%
+    {\bfseries\@recipientname}\\%
+    \@recipientaddress%
+		}%
+  \end{minipage}\\[1.5em]%
+  % date
+  \addressstyle{\bfseries\@date}\\[2em]%
+  % opening
+  \@opening\\[1.5em]%
+  % ensure no extra spacing after \makelettertitle due to a possible blank line
+  \hspace{0pt}\par\vspace{-\baselineskip}\vspace{-\parskip}
+}
+
+\newcommand{\makeletterclosing}{%
+  \@closing\\[3em]%
+  {\bfseries \@name}%
+  \ifthenelse{\isundefined{\@enclosure}}{}{%
+    \\%
+    \vfill%
+    {\color{color2}\itshape Enclosed: \@enclosure}}}
+
+\endinput
