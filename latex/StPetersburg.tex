@@ -11,7 +11,7 @@ language=mathematica,
 mathescape,
 columns=flexible,
 %basicstyle={\sffamily\footnotesize},
-commentstyle=\color{gray!50},
+commentstyle=\color{gray!70},
 numbersep=5pt,
 breaklines=true,
 keywordstyle=\color{color1},
@@ -89,8 +89,31 @@ To solve the Markov chain computationally we have to impose an artificial upper 
 \subsection*{Mathematica code}
 
 \begin{mat}
-(*Hi*)
-Integrate[{y^(-3)*(1-(a/y)^2)^(-2)},{y,r,Infinity}]
+(*Construct the transition matrix for cost m and state-space size nStates*)
+m = 2;
+nStates = 2^10;
+weights =  Table[(p^n (1 - p)) /. p -> 0.5, {n, 0, Floor[Log2[nStates]]}];
+dim = {nStates, nStates};
+
+mat = 
+Total[
+   Map[
+      SparseArray[
+         Table[{i, m + i - 2^#} -> weights[[# + 1]], {i, 2^#, 
+           Min[nStates - m + 2^#, nStates]}], dim] &,
+       Range[0, Floor[Log2[nStates]] ]
+   ]
+];
+mat += SparseArray[Table[{i, i} -> 1., {i, 1, m - 1}], dim];
+
+(*Build the initial state vector*)
+s = 5;
+P = Normal[SparseArray[s -> 1, nStates]];
+(*Apply the matrix nIter times to the state vector*)
+nIter = 1000;
+Pfinal = Nest[Dot[mat, #] &, P, nIter];
+(*Calculate the probability in the states i>m*)
+1 -  Sum[Pfinal[[k]], {k, 1, m - 1}]
 \end{mat}
 
 
