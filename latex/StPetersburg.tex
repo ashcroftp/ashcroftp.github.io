@@ -86,34 +86,52 @@ p_m(s) = \lim_{t\to\infty} \left[1- \sum_{i=1}^{m-1} P_i(t)\right].
 \end{equation}
 To solve the Markov chain computationally we have to impose an artificial upper bound on the size of the state space, as well as on the number of iterations $t$.
 
+The survival probability $p_m(s)$ is shown in Fig.~\ref{fig:StPetersburgOut} for a range of $m$ and $s$ parameters.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{StPetersburgOut.pdf}
+\caption{Survival probability after $2^{10}$ iterations and a state space of size $2^{10}$.}
+\label{fig:StPetersburgOut}
+\end{figure}
+
 \subsection*{Mathematica code}
 
 \begin{mat}
+computeMat[log2nStates_, m_] := Block[{nStates, weights, dim, mat},
+  nStates = 2^log2nStates;
+  weights = Table[(p^n (1 - p)) /. p -> 0.5, {n, 0, Floor[log2nStates]}];
+  dim = {nStates, nStates};
+  
+  mat = Total[
+    Map[
+      SparseArray[
+        Table[{i, m + i - 2^#} -> weights[[# + 1]], {i, 2^#, Min[nStates - m + 2^#, nStates]}],
+        dim] &, 
+      Range[0, Floor[log2nStates]]
+    ]
+  ];
+  mat += SparseArray[Table[{i, i} -> 1., {i, 1, m - 1}], dim];
+  Return[mat]
+]
+
+computeP[log2nStates_, m_, s_, log2nIter_, mat_] := 
+ Block[{nStates, nIter, P, Pfinal},
+  nStates = 2^log2nStates;
+  nIter = 2^log2nIter;
+  P = Normal[SparseArray[s -> 1., nStates]];
+  Pfinal = Nest[Dot[mat, #] &, P, nIter];
+  Return[1. - Sum[Pfinal[[i]], {i, 1, m - 1}]]
+]
+
 (*Construct the transition matrix for cost m and state-space size nStates*)
 m = 2;
 nStates = 2^10;
-weights =  Table[(p^n (1 - p)) /. p -> 0.5, {n, 0, Floor[Log2[nStates]]}];
-dim = {nStates, nStates};
+mat = computeMat[Log2[nStates], m];
 
-mat = 
-Total[
-   Map[
-      SparseArray[
-         Table[{i, m + i - 2^#} -> weights[[# + 1]], {i, 2^#, 
-           Min[nStates - m + 2^#, nStates]}], dim] &,
-       Range[0, Floor[Log2[nStates]] ]
-   ]
-];
-mat += SparseArray[Table[{i, i} -> 1., {i, 1, m - 1}], dim];
-
-(*Build the initial state vector*)
-s = 5;
-P = Normal[SparseArray[s -> 1, nStates]];
-(*Apply the matrix nIter times to the state vector*)
+s = 2;
 nIter = 1000;
-Pfinal = Nest[Dot[mat, #] &, P, nIter];
-(*Calculate the probability in the states i>m*)
-1 -  Sum[Pfinal[[k]], {k, 1, m - 1}]
+survivalProb = computeP[Log2[nStates], m, s, Ceiling[Log2[nIter]], mat]
 \end{mat}
 
 
