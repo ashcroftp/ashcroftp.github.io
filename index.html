@@ -20,6 +20,7 @@
         <ul>
           <li><a href="#about-me" onclick="openTab('about-me')" id="defaultOpen">about me</a></li>
           <li><a href="#my-research" onclick="openTab('my-research')">my research</a></li>
+          <li><a href="#COVID-19" onclick="openTab('COVID-19')">COVID-19</a></li>
           <li><a href="#publications" onclick="openTab('publications')">publications</a></li>
           <li><a href="#code" onclick="openTab('code')">apps &amp; code</a></li>
           <li><a href="#gists" onclick="openTab('gists')">gists &amp; tricks</a></li>
@@ -139,6 +140,49 @@
       </div>
     </div>
 
+    <!-- COVID-19 -->
+    <div class="tab" id="COVID-19">
+      <div class="my-research" id="COVID-19">
+        <div class="container">
+          <div class="block">
+            <h2>COVID-19</h2>
+
+            <div class="project">
+              <!-- <img class="my-image" src="./images/tree.jpg"> -->
+              <div class="description">
+                <span class="title">icu-monitoring</span>
+                <p>
+                  <a href="https://icumonitoring.ch" target="_blank" style="color: var(--accent-colour);">icumonitoring.ch</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="project">
+              <!-- <img class="my-image" src="./images/cancer.jpg"> -->
+              <div class="description">
+                <span class="title">infectivity profile correction</span>
+                <p>
+                  <a href="https://smw.ch/article/doi/smw.2020.20336" target="_blank" style="color: var(--accent-colour);">Swiss Medical Weekly</a>
+                </p>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="description">
+                <span class="title">serial intervals, infectivity profiles, and generation times</span>
+              </div>
+            </div>
+
+            <div class="project">
+              <div class="description">
+                <span class="title">contact tracing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- publications -->
     <div class="tab" id="publications">
       <div class="publications" id="publications">
@@ -163,6 +207,12 @@
             <div class="years-list">
               <table class="empty-table" style="margin: 10px 0px;">
                 <tr>
+                  <td>
+                    <a href="#year-2020">
+                      <div class="button">2020</div>
+                    </a>
+                  </td>
+                  <td style="width=10px;"></td>
                   <td>
                     <a href="#year-2019">
                       <div class="button">2019</div>
@@ -211,6 +261,80 @@
 
 
             <div class="years">
+              <div class="year-2020" id="year-2020">
+                <h3>2020</h3>
+                <ol start="11">
+                  <li>
+                    <div class="paper">
+                      <table>
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Jana S. Huisman, Sonja Lehtinen, Judith A. Bouman, Christian L. Althaus, Roland R. Regoes, Sebastian Bonhoeffer</div>
+                                <div class="OA"></div>
+                              </tr>
+                              <tr>
+                                <div class="paper-title">COVID-19 infectivity profile correction</div>
+                              </tr>
+                              <tr>
+                                <div class="paper-reference">Swiss Med Wkly. 150 (2020)&emsp;(DOI: 10.4414/smw.2020.20336)</div>
+                              </tr>
+                            </table>
+                          </td>
+                          <td style="width:10px;"></td>
+                          <td>
+                            <a href="https://doi.org/10.4414/smw.2020.20336" target="_blank">
+                              <div class="button">SMW</div>
+                            </a>
+                          </td>
+                          <td style="width:10px;"></td>
+                          <td>
+                            <a href="https://arxiv.org/abs/2007.06602" target="_blank">
+                              <div class="button">arXiv</div>
+                            </a>
+                          </td>
+                          <td style="width:10px;"></td>
+                          <td>
+                            <a href="./files/Ashcroft-SMW-2020.pdf" target="_blank">
+                              <div class="button">PDF</div>
+                            </a>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                  </li>
+
+                  <li>
+                    <div class="paper">
+                      <table>
+                        <tr>
+                          <td>
+                            <table>
+                              <tr>
+                                <div class="paper-authors">Ronny Nienhold, <span class="me">Peter Ashcroft</span>, Jakub Zmajkovic, Shivam Rai, Nageswara Rao Tata, Beatrice Drexler, Sara Christina Meyer, Pontus Lundberg, Jakob R. Passweg, Danijela Lekovic,  Vladan P. Cokic, Sebastian Bonhoeffer, Radek C. Skoda</div>
+                              </tr>
+                              <tr>
+                                <div class="paper-title">MPN patients with low mutant JAK2 allele burden show late expansion restricted to erythroid and megakaryocytic lineages</div>
+                              </tr>
+                              <tr>
+                                <div class="paper-reference">Blood blood.2019002943 (2020)&emsp;(DOI: 10.1182/blood.2019002943)</div>
+                              </tr>
+                            </table>
+                          </td>
+                          <td style="width:10px;"></td>
+                          <td>
+                            <a href="https://doi.org/10.1182/blood.2019002943" target="_blank">
+                              <div class="button">Blood</div>
+                            </a>
+                          </td>
+                          <td style="width:10px;"></td>
+                        </tr>
+                      </table>
+                    </div>
+                  </li>
+                </ol>
+              </div>
               <div class="year-2019" id="year-2019">
                 <h3>2019</h3>
                 <ol start="9">
@@ -222,12 +346,13 @@
                             <table>
                               <tr>
                                 <div class="paper-authors">Lei Sun*, <span class="me">Peter Ashcroft*</span>, Martin Ackermann, Sebastian Bonhoeffer</div>
+                                <div class="OA"></div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Stochastic gene expression influences the selection of antibiotic resistance mutations</div>
                               </tr>
                               <tr>
-                                <div class="paper-reference">Mol. Biol. Evol. 37 (2019)&emsp;(DOI: 10.1093/molbev/msz199)</div>
+                                <div class="paper-reference">Mol. Biol. Evol. 37 (2020)&emsp;(DOI: 10.1093/molbev/msz199)</div>
                               </tr>
                             </table>
                           </td>
@@ -303,7 +428,8 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span>, M.G. Manz, and S. Bonhoeffer</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Markus G. Manz, and Sebastian Bonhoeffer</div>
+                                <div class="OA"></div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Clonal dominance and transplantation dynamics in hematopoietic stem cell compartments</div>
@@ -343,7 +469,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span>, C.E.R. Smith, M. Garrod, and T. Galla</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Casandra E.R. Smith, Matthew Garrod, Tobias Galla</div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Effects of population growth on the success of invading mutants</div>
@@ -389,7 +515,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="book-authors"><span class="me">P. Ashcroft</span></div>
+                                <div class="book-authors"><span class="me">Peter Ashcroft</span></div>
                               </tr>
                               <tr>
                                 <div class="book-title">The statistical physics of fixation and equilibration in individual-based models</div>
@@ -428,7 +554,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span>, A. Traulsen, and T. Galla</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Arne Traulsen, Tobias Galla</div>
                                 <div class="OA"></div>
                               </tr>
                               <tr>
@@ -469,7 +595,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span>, F. Michor, and T. Galla</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Franziska Michor, Tobias Galla</div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Stochastic tunneling and metastable states during the somatic evolution of cancer</div>
@@ -514,7 +640,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span>, P.M. Altrock, and T. Galla</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Philipp M. Altrock, Tobias Galla</div>
                                 <div class="OA"></div>
                               </tr>
                               <tr>
@@ -560,7 +686,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">P. Ashcroft</span> and T. Galla</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span> and Tobias Galla</div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Pattern formation in individual-based systems with time-varying parameters</div>
@@ -619,7 +745,7 @@
                 </td>
                 <td style="width:10px;"></td>
                 <td>
-                  <a href="https://ibz-shiny.ethz.ch/ashcroft/MPNBurden/bb-code/Shiny/ClonalFractionMPN/" target="_blank">
+                  <a href="https://ibz-shiny.ethz.ch/ashcroft/lowJAK2/app/" target="_blank">
                   <div class="button">MPN clonal fraction</div>
                   </a>
                 </td>
@@ -740,7 +866,7 @@
               <li><b>2012 &mdash; 2015:</b> PhD with Tobias Galla in the Complex Systems and Statistical Physics group at The University of Manchester, UK.</li>
               <li><b>2008 &mdash; 2012:</b> Undergraduate Maths and Physics degree (M.Math and Phys) at The University of Manchester, UK.</li>
             </ul>
-            <table class="empty-table">
+            <!-- <table class="empty-table">
               <tr>
                 <td>
                   <p>You can also view my full CV here: </p>
@@ -751,8 +877,8 @@
                     <div class="button">CV</div>
                   </a>
                 </td>
-              </tr>
-            </table>
+              </tr
+            </table> -->
           </div>
         </div>
       </div>
