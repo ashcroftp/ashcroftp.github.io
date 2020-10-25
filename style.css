@@ -216,19 +216,19 @@ nav li a:hover {
   float: left;
 }
 
-.publications .years .paper {}
+.paper {}
 
-.publications .years .paper-authors {
+.paper .paper-authors {
   font-weight: 300;
   float: left;
 }
 
-.publications .years .paper-title {
+.paper .paper-title {
   font-weight: 400;
   clear: left;
 }
 
-.publications .years .paper-reference {
+.paper .paper-reference {
   font-weight: 300;
 }
 

@@ -150,21 +150,80 @@
             <div class="project">
               <!-- <img class="my-image" src="./images/tree.jpg"> -->
               <div class="description">
-                <span class="title">icu-monitoring</span>
+                <span class="title">icumonitoring.ch</span>
                 <p>
-                  <a href="https://icumonitoring.ch" target="_blank" style="color: var(--accent-colour);">icumonitoring.ch</a>
+                  <a href="https://icumonitoring.ch" target="_blank" style="color: var(--accent-colour);">icumonitoring.ch</a> is a platform to follow in near-real time beds/ventilators occupancy in intensive care units (ICU) in Switzerland during the COVID19 epidemic.
+                  The platform offers projections of ICU occupancy 3- and 7-days ahead by Regions, Cantons, and hospitals.
+                  This platform now features on <a href="https://www.srf.ch/news/schweiz/coronavirus-so-entwickeln-sich-die-corona-zahlen-in-der-schweiz" target="_blank" style="color: var(--accent-colour);">SRF's COVID-19 platform</a>.
                 </p>
+                <p>
+                  I predict ICU bed occupancy in Switzerland due to the current COVID-19 pandemic. In particular, I quantify the risk of exceeding ICU capacity under different epidemic scenarios including a second wave of infections.
+                </p>
+                <table class="empty-table" style="margin: 10px 0px;">
+                  <tr>
+                    <td>
+                      <a href="https://icumonitoring.ch" target="_blank">
+                        <div class="button">icumonitoring.ch</div>
+                      </a>
+                    </td>
+                    <td style="width=10px;"></td>
+                    <td>
+                      <a href="https://polybox.ethz.ch/index.php/s/MT5WXeRxQgqNwHu" target="_blank">
+                        <div class="button">methodology</div>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
 
             <div class="project">
-              <!-- <img class="my-image" src="./images/cancer.jpg"> -->
               <div class="description">
                 <span class="title">infectivity profile correction</span>
                 <p>
-                  <a href="https://smw.ch/article/doi/smw.2020.20336" target="_blank" style="color: var(--accent-colour);">Swiss Medical Weekly</a>,
-                  <a href="https://github.com/ashcroftp/infectivityProfile2020" target="_blank" style="color: var(--accent-colour);">GitHub</a>
+                  The infectivity profile describes infectiousness relative to symptom onset time.
+                  In <a href="https://www.nature.com/articles/s41591-020-0869-5" target="_blank" style="color: var(--accent-colour);">He et al. Nat. Med. (2020)</a>, it was calculated from the empirical serial interval distribution and incubation period distribution.
+                  However, I discovered a critical error in the code which, when corrected, resulted in a very different infectivity profile.
                 </p>
+                <p>
+                  This story was covered by <a href="https://nzzas.nzz.ch/wissen/corona-contact-tracing-basiert-auf-fehlerhaften-studie-ld.1571429?reduced=true" target="_blank" style="color: var(--accent-colour);">NZZ am Sonntag</a>. Eventually a <a href="https://www.nature.com/articles/s41591-020-1016-z" target="_blank" style="color: var(--accent-colour);">formal correction</a> was made to the He et al. article.
+                </p>
+                <img style="width:100%;" src="./images/infectivityProfiles.jpg">
+                <div class="paper">
+                  <table>
+                    <tr>
+                      <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Jana S. Huisman, Sonja Lehtinen, Judith A. Bouman, Christian L. Althaus, Roland R. Regoes, Sebastian Bonhoeffer</div>
+                      <div class="OA"></div>
+                    </tr>
+                    <tr>
+                      <div class="paper-title">COVID-19 infectivity profile correction</div>
+                    </tr>
+                    <tr>
+                      <div class="paper-reference">Swiss Med Wkly. 150 (2020)&emsp;(DOI: 10.4414/smw.2020.20336)</div>
+                    </tr>
+                  </table>
+                </div>
+                <table class="empty-table" style="margin: 10px 0px;">
+                  <tr>
+                    <td>
+                      <a href="https://smw.ch/article/doi/smw.2020.20336" target="_blank">
+                        <div class="button">Swiss Med Wkly.</div>
+                      </a>
+                    </td>
+                    <td style="width=10px;"></td>
+                    <td>
+                      <a href="https://github.com/ashcroftp/infectivityProfile2020" target="_blank">
+                        <div class="button">GitHub</div>
+                      </a>
+                    </td>
+                    <td style="width=10px;"></td>
+                    <td>
+                      <a href="./files/Ashcroft-SMW-2020.pdf" target="_blank">
+                        <div class="button">PDF</div>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
 
@@ -172,8 +231,32 @@
               <div class="description">
                 <span class="title">serial intervals, infectivity profiles, and generation times</span>
                 <p>
-                  <a href="https://doi.org/10.1101/2020.09.18.20197210" target="_blank" style="color: var(--accent-colour);">medRxiv</a>
+                  The generation time distribution, a critical factor in the dynamics and controllability of an epidemic, is often estimated based on the serial interval distribution (distribution of time intervals between symptom onset of an infector and an infectee). The different approaches to this calcuation make different -- and not always explicitly stated -- assumptions about the relationship between infectiousness and symptoms, resulting in different generation time distributions with the same mean but unequal variances. Here, we clarify the assumptions that each approach makes.
                 </p>
+                <div class="paper">
+                  <table>
+                    <tr>
+                      <div class="paper-authors">Sonja Lehtinen, <span class="me">Peter Ashcroft</span>, Sebastian Bonhoeffer</div>
+                      <div class="OA"></div>
+                    </tr>
+                    <tr>
+                      <div class="paper-title">On the relationship between serial interval, infectiousness profile and generation time</div>
+                    </tr>
+                    <tr>
+                      <div class="paper-reference">medRxiv (2020)&emsp;(DOI: 10.1101/2020.09.18.20197210)</div>
+                    </tr>
+                  </table>
+                </div>
+                <table class="empty-table" style="margin: 10px 0px;">
+                  <tr>
+                    <td>
+                      <a href="https://doi.org/10.1101/2020.09.18.20197210" target="_blank">
+                        <div class="button">medRxiv</div>
+                      </a>
+                    </td>
+                    <td style="width=10px;"></td>
+                  </tr>
+                </table>
               </div>
             </div>
 
@@ -181,9 +264,37 @@
               <div class="description">
                 <span class="title">quarantine duration</span>
                 <p>
-                  <a href="https://doi.org/10.1101/2020.09.24.20201061" target="_blank" style="color: var(--accent-colour);">medRxiv</a>,
-                  <a href="https://github.com/ashcroftp/quarantine2020" target="_blank" style="color: var(--accent-colour);">GitHub</a>
+                  There is ongoing debate about the appropriate duration of quarantine, particularly since the fraction of individuals who eventually test positive is perceived as being low. We use empirically-determined distributions of incubation period, infectivity, and generation time to quantify how the duration of quarantine affects onward transmission from traced contacts of confirmed SARS-CoV-2 cases and from returning travellers. We also consider the roles of testing followed by release if negative (test-and-release), reinforced hygiene, adherence, and symptoms in calculating quarantine efficacy. We show that there are quarantine strategies based on a test-and-release protocol that, from an epidemiological viewpoint, perform almost as well as a 10 day quarantine, but with fewer person days spent in quarantine. The findings apply to both travellers and contacts, but the specifics depend on the context.
                 </p>
+                <div class="paper">
+                  <table>
+                    <tr>
+                      <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Sonja Lehtinen, Daniel C. Angst, Sebastian Bonhoeffer</div>
+                      <div class="OA"></div>
+                    </tr>
+                    <tr>
+                      <div class="paper-title">Quantifying the impact of quarantine duration on COVID-19 transmission</div>
+                    </tr>
+                    <tr>
+                      <div class="paper-reference">medRxiv (2020)&emsp;(DOI: 10.1101/2020.09.24.20201061)</div>
+                    </tr>
+                  </table>
+                </div>
+                <table class="empty-table" style="margin: 10px 0px;">
+                  <tr>
+                    <td>
+                      <a href="https://doi.org/10.1101/2020.09.24.20201061" target="_blank">
+                        <div class="button">medRxiv</div>
+                      </a>
+                    </td>
+                    <td style="width=10px;"></td>
+                    <td>
+                      <a href="https://github.com/ashcroftp/quarantine2020" target="_blank">
+                        <div class="button">GitHub</div>
+                      </a>
+                    </td>
+                  </tr>
+                </table>
               </div>
             </div>
 
@@ -209,7 +320,7 @@
                 <td>
                   <p>For approximate citometrics, check my Google Scholar account.</p>
                 </td>
-                <td style="width:10px;"></td>
+                <td style="width=10px;"></td>
                 <td>
                   <a href="https://scholar.google.co.uk/citations?user=ba2dsUQAAAAJ&hl=en" target="_blank">
                     <div class="button"> Google Scholar </div>
@@ -285,7 +396,7 @@
                           <td>
                             <table>
                               <tr>
-                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Sonja Lehtinen, Sebastian Bonhoeffer</div>
+                                <div class="paper-authors"><span class="me">Peter Ashcroft</span>, Sonja Lehtinen, Daniel C. Angst, Sebastian Bonhoeffer</div>
                                 <div class="OA"></div>
                               </tr>
                               <tr>
@@ -475,6 +586,7 @@
                             <table>
                               <tr>
                                 <div class="paper-authors">Jeffrey West, Derek Park, Cathal Harmon, Drew Williamson, <span class="me">Peter Ashcroft</span>, Davide Maestrini, Alexandra Ardaseva, Rafael Bravo, Prativa Sahoo, Hung Khong, Kimberly Luddy, Mark Robertson-Tessi</div>
+                                <div class="OA"></div>
                               </tr>
                               <tr>
                                 <div class="paper-title">Evolutionary exploitation of PD-L1 expression in hormone receptor positive breast cancer</div>
@@ -824,13 +936,14 @@
             <table class="empty-table">
               <tr>
                 <td>
-                  <a href="https://ashcroftp.shinyapps.io/IMO-ODE-solver/" target="_blank">
-                  <div class="button">PDL-1</div>
+                  <a href="https://ibz-shiny.ethz.ch/ashcroft/lowJAK2/app/" target="_blank">
+                  <div class="button">MPN clonal fraction</div>
+                  </a>
                 </td>
                 <td style="width:10px;"></td>
                 <td>
-                  <a href="https://ibz-shiny.ethz.ch/ashcroft/lowJAK2/app/" target="_blank">
-                  <div class="button">MPN clonal fraction</div>
+                  <a href="https://ashcroftp.shinyapps.io/IMO-ODE-solver/" target="_blank">
+                  <div class="button">PDL-1</div>
                   </a>
                 </td>
               </tr>
