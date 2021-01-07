@@ -5,6 +5,7 @@
   --accent-colour: #2c6eb5;
   --accent-colour-fade: #3990ed;
   --text-colour: black;
+  --background-colour: #f8faff;
 }
 
 /* Initial body */
@@ -89,7 +90,7 @@ nav li a:hover {
 .content .container {
   width: 80%;
   margin: 10px auto;
-  background-color: #f2f2f2;
+  background-color: var(--background-colour);
 }
 
 .content .container .block {
